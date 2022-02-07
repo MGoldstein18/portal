@@ -225,7 +225,7 @@ getBalanceOfAllRecipients();
 const getBalanceOf = async (walletAddress) => {
   try {
     await splits.balanceOf(walletAddress);
-  } catch (ersror) {
+  } catch (error) {
     console.log('Failed to get get balance of address. Error: ', error);
   }
 };
