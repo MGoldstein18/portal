@@ -31,7 +31,7 @@ Here are the steps we will follow in this guide:
 
 ## 1. Create Module
 
-Our first step is to create a bundle drop module. This can be done in the [dashboard](https://thirdweb.com/dashboard) and if you aren’t sure how to create the module please check [this guide.](https://thirdweb.com/portal/learn/introduction) 
+Our first step is to create a bundle drop module. This can be done in the [dashboard](/dashboard) and if you aren’t sure how to create the module please check [this guide.](/portal/learn/introduction) 
 
 ## 2. Project Set-Up
 
@@ -62,9 +62,10 @@ Import the libraries we’ll need:
 // Importing libraries
 import { ThirdwebSDK } from '@3rdweb/sdk';
 import { ethers } from 'ethers';
+import dotenv from 'dotenv';
 
-//Importing private key
-require('dotenv').config()
+// Use dotenv for private key
+dotenv.config();
 ```
 
 Instantiate and connect to the module using the module address found in the dashboard. Then export the module.
@@ -128,7 +129,7 @@ In your root directory, run the code with this command in your console: `npx ts-
 
 And you should see the success message in your console:
 
-![Screenshot 2022-01-30 at 17.06.54.png](Early%20Access%20NFT%20958ea49b9ae943ee925614917689a53c/Screenshot_2022-01-30_at_17.06.54.png)
+![](./1-early-access-nft.png)
 
 Awesome! We have our early access NFT☺️
 
@@ -138,7 +139,7 @@ PS: This is a TypeScript project. Don’t forget that you will need a `tsconfig.
 
 ## 5. Set NFT Price and Supply
 
-Now that we have our NFT, we need to set the start time, price, and supply. We can also set the number of NFTs that can be claimed in one transaction, create a white-list and adjust other settings. You can see a [full example here](https://thirdweb.com/portal/learn/code-examples/bundle-drop#setting-claim-conditions) (look at the 3rd example).
+Now that we have our NFT, we need to set the start time, price, and supply. We can also set the number of NFTs that can be claimed in one transaction, create a white-list and adjust other settings. You can see a [full example here](/portal/learn/code-examples/bundle-drop#setting-claim-conditions) (look at the 3rd example).
 
 For our project, we are only going to set the start time, price, and supply. We can do this in a new file called `nftConfig.ts`. Start by importing our module and the necessary library.
 
@@ -202,7 +203,7 @@ In your root directory, run the code with this command in your console: `npx ts-
 
 And you should see the success message in your console:
 
-![Screenshot 2022-01-30 at 21.33.02.png](Early%20Access%20NFT%20958ea49b9ae943ee925614917689a53c/Screenshot_2022-01-30_at_21.33.02.png)
+![](./1-early-access-nft.png)
 
 Amazing! We now have 1000 claimable NFTs! We just need a frontend for our users to interact with. Let’s do it☺️
 
@@ -274,7 +275,7 @@ export default Nft;
 
 ## 7. Add a connect wallet button
 
-Before users can claim an NFT, they need to connect their wallets. Thirdweb makes this incredibly easy! We can simply use the `ThirdwebProvider` context with the `ConnectWallet` component to make it happen. For all the details, please check out [this guide](https://thirdweb.com/portal/guides/add-connectwallet-to-your-website). 
+Before users can claim an NFT, they need to connect their wallets. Thirdweb makes this incredibly easy! We can simply use the `ThirdwebProvider` context with the `ConnectWallet` component to make it happen. For all the details, please check out [this guide](/portal/guides/add-connectwallet-to-your-website). 
 
 After going through that guide, our `App.tsx` file should look similar to this:
 
@@ -430,16 +431,16 @@ export default ClaimButton;
 
 Congrats🥳 You’ve got a claimable early access NFT! Yours could like something like this:
 
-![**Connect Button**](Early%20Access%20NFT%20958ea49b9ae943ee925614917689a53c/Screenshot_2022-01-31_at_00.00.32.png)
+![**Connect Button**](./3-early-access-nft.png)
 
 **Connect Button**
 
-![**Connected and ready to claim**](Early%20Access%20NFT%20958ea49b9ae943ee925614917689a53c/Screenshot_2022-01-31_at_00.00.48.png)
+![**Connected and ready to claim**](./4-early-access-nft.png)
 
 **Connected and ready to claim**
 
-![While claiming the NFT](Early%20Access%20NFT%20958ea49b9ae943ee925614917689a53c/Screenshot_2022-01-31_at_00.00.58.png)
+![While claiming the NFT](./5-early-access-nft.png)
 
 While claiming the NFT
 
-**If you want to take this project further, you can explore how we could use the `balanceOf` method to check whether or not a user has minted one of our NFTs! Check out our code examples [here](https://thirdweb.com/portal/learn/code-examples/bundle-drop).**
+**If you want to take this project further, you can explore how we could use the `balanceOf` method to check whether or not a user has minted one of our NFTs! Check out our code examples [here](/portal/learn/code-examples/bundle-drop).**
